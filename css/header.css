@@ -258,6 +258,10 @@ header {
         display: none;
     }
 
+    .search-box.active {
+    display: flex;
+  }
+
     .btn {
         display: none; 
     }
