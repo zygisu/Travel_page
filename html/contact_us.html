@@ -21,6 +21,24 @@
 </head>
 <body>
     <header class="header-contact-us">
+      <nav class="navbar"> 
+        <div class="navbar-left">
+          <img src="../css/icons/search-white.svg" alt="Search" class="search-icon" id="search-toggle">
+          <form class="search-box">
+            <input type="text" id="search-input" placeholder="Search our destinations..." />
+            <ul id="suggestions" class="suggestions-list"></ul>
+          </form>
+        </div>
+        <div class="navbar-center">
+          <a href="../index.html" class="btn-globe">
+            <img src="../css/icons/globe-white.svg" alt="Logo" class="globe-icon">
+          </a>
+        </div>
+        <div class="navbar-right">
+          <a href="contact_us.html" class="btn btn-light">Contact us</a>
+          <img src="../css/icons/three-bars-white.svg" alt="Menu" class="menu-icon">
+        </div>
+      </nav>
         <div class="header-bottom">
             <div class="header_text">
                 <div>Amazing location is waiting for you</div>
@@ -61,24 +79,7 @@
     </form>
   </section>
 </main>
-    <script>
-        const form = document.getElementById('bookingForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const formError = document.getElementById('formError');
-        form.addEventListener('input', function () {
-            submitBtn.disabled = !form.checkValidity();
-            formError.classList.remove('active');
-        });
-        form.addEventListener('submit', function (e) {
-            if (!form.checkValidity()) {
-                e.preventDefault();
-                formError.classList.add('active');
-            } else {
-                e.preventDefault();
-                window.location.href = 'contact_succes.html';
-            }
-        });
-    </script>    
+    <script src="../script.js"></script> 
     <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
@@ -101,5 +102,6 @@
     </div>
     </div>
     </footer>
+    <script src="../script.js"></script>
 </body>
 </html>
