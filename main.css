@@ -1,0 +1,344 @@
+.main-content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.text-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.text-row .col {
+  flex: 1;
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: #222;
+  font-size: 1rem;
+}
+
+.photo-row {
+  display: flex;
+  margin-bottom: 40px;
+}
+.photo-col {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.photo-col img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.photo-col:first-child img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.photo-col:last-child img {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.photo-img-wrapper {
+  position: relative;
+  width: 100%;      
+  height: 400px;     
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.photo-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+  }
+
+.gallery-title, .photo-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  padding: 12px 0;
+  text-align: center;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.92) 5%,
+    rgba(0,0,0,0.45) 40%,
+    rgba(0,0,0,0.0) 90%
+  );
+  pointer-events: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 2;
+}
+
+ .photo-caption {
+  font-size: 2.2rem !important;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+ .country {
+  font-size: 0.45em !important; 
+  display: inline;
+  margin-left: 8px;
+  margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  opacity: 0.7;                   
+}
+
+.destinations-gallery {
+  padding: 40px 0;
+  background: #f8f9fa;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+.gallery-item:hover,
+.gallery-item:focus {
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus img {
+  transform: scale(1.08);
+}
+
+.gallery-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+.gallery-item a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery-item a .photo-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  padding: 12px 0;
+  text-align: center;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.92) 5%,
+    rgba(0,0,0,0.45) 40%,
+    rgba(0,0,0,0.0) 90%
+    );
+  pointer-events: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 2;
+}
+
+main.container {
+  max-width: 950px;
+}
+
+.row.align-items-center {
+  margin-bottom: 3rem;
+}
+
+.col-md-6 {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-md-6 img.img-fluid {
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.col-md-6 h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2d2d2d;
+}
+
+.col-md-6 p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.contact-booking-form {
+  max-width: 650px;
+  margin: 40px auto 60px;
+  font-family: 'Montserrat', sans-serif;
+  color: #222
+}
+
+.contact-form-info {
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact-booking-form label {
+  font-weight: 600;
+  margin-top: 6px; 
+  margin-bottom: 6px;
+}
+
+.contact-booking-form input,
+.contact-booking-form textarea {
+  border-radius: 10px;
+  padding: 16px 16px;
+}
+
+.contact-booking-form .submit-btn, .back-btn {
+  all: unset;
+  display: block;
+  width: 100%;
+  background-color: #edb430;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 16px 0;
+  text-align: center;
+  margin-top: 10px;
+  border: none;
+  transition: background 0.2s;
+}
+.contact-booking-form .submit-btn:hover, .back-btn:hover {
+  background-color: #2e9108;
+  color: white;
+}
+
+.back-btn {
+  margin-top: 0 !important;
+}
+
+.form-error-message {
+  color: #d32f2f;
+  background: #fff0f0;
+  border: 1px solid #d32f2f;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  display: none;
+}
+.form-error-message.active {
+  display: block;
+}
+
+@media (max-width: 450px) {
+  .destinations-section .text-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .destinations-section .text-row .col {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .photo-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .photo-row .photo-col {
+    width: 100%;
+  }
+
+  .photo-col img {
+    border-radius: 10px;
+  }
+
+  .row.align-items-center {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .col-md-6 {
+    padding: 0.5rem 0;
+  }
+
+  .gallery-grid {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+
+  .photo-caption {
+    font-size: 1.4rem !important;
+    padding: 4px 4px;
+  }
+
+  .country {
+    display: none;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+
+  .contact_us_main {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+}
+
