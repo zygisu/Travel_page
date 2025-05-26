@@ -1,65 +1,93 @@
-__Travel company web page project__
+File structure is like this, becouse it was inherited from Hands on project. Redoing this web page, structure would be changed to this: EXAMPLE
+CSS files should be splited into types, like fonts, headers and so, not by page. 
 
-__Features__
-This project represents designed travel web page with few subpages. Design and html formating part is 99% done, funcionality like buttons just started to implement
-- Search field in header nav bar works. Drop down menu drops only locations listed in gallery. 
-- Contact Us button in header nav bar works. 
-- From gallery only Amalfi subpage is designed and clickable.
-- Booking forms in index and Amalfi subpage not implemented. 
-- List of links in footer works. 
-- Subscribe button in footer not implemented. 
-- 3 horizontal lines button in mobile version not implemented. 
+Changes from hands on offered screenshots were made to keep project part funcionalities and 
 
-__Instalation__
-- Download all files, check if structure is the same as noted below. 
-- No additional tools, libraries and nice things needed to run. Just open index.html with browser, code space preview mode or similar tool and navigate through subpages.  
+Differences in gallery, Amalfi is clickable and redirects to amalfi page. Other is not, so html diffres and there are additional css rules to make all lokk the same
 
 
-__Usage__
-- Desktop version designed to fit most laptop and iPad sizes. 
-- Mobile version tested and run smothly on most iPhone and Samsung screen sizes. 
-- Using non standart resolution could couze some minor designe bugs. 
 
-__Structure__
-- index.html                                      # main landing page file
-- css - icons  - arrow-right.svg                  # .svg icon used in header
-               - arrow-right-white.svg            # .svg icon used in header
-               - globe-white.svg                  # .svg icon used in header
-               - search-white.svg                 # .svg icon used in header
-               - three-bars-white.svg             # .svg icon used in header mobile version
-- css - images - amalfi - amalfi_beaches.jpg      # .jpg used in amalfi subpage
-                        - amalfi_food.jpg         # .jpg used in amalfi subpage
-                        -amalfi_vineyards.jpg     # .jpg used in amalfi subpage
-- css - images - destinations - amalfi.jpg        # .jpg used in destinations gallery
-                              - bled.jpg          # .jpg used in destinations gallery
-                              - cairo.jpg         # .jpg used in destinations gallery
-                              - dubrovnik.jpg     # .jpg used in destinations gallery
-                              - kotor.jpg         # .jpg used in destinations gallery
-                              - lofoten.jpg       # .jpg used in destinations gallery
-                              - madeira.jpg       # .jpg used in destinations gallery
-                              - manarola.jpg      # .jpg used in destinations gallery
-                              - naples.jpg        # .jpg used in destinations gallery
-                              - ogrid.jpg         # .jpg used in destinations gallery
-                              - paris.jpg         # .jpg used in destinations gallery
-                              - porto.jpg         # .jpg used in destinations gallery
-                              - rome.jpg          # .jpg used in destinations gallery
-                              - san-francisco.jpg # .jpg used in destinations gallery
-                              - sydney.jpg        # .jpg used in destinations gallery
-                              - theth.jpg         # .jpg used in destinations gallery
-                              - tokyo.jpg         # .jpg used in destinations gallery
-- css - images - header.jpg                       # .jpg header of landing page
-- css - images - header_amalfi.jpg                # .jpg header of amalfi subpage
-- css - images - header_contact_succes.jpg        # .jpg header of contact_succes subpage
-- css - images - header_contact_us.jpg            # .jpg header of contact_us subpage
-- css - images - header_destinations.jpg          # .jpg header of destinations_gallery subpage
-- css - footer.css                                # .css of footer
-- css - header.css                                # .css of header
-- css - main.css                                  # .css of main body
-- html - amalfi.html                              # .html of amalfi subpage
-- html - contact_succes.html                      # .html of contact_succes subpage
-- html - contact_us.html                          # .html of contact_us subpage
-- html - destinations_gallery.html                # .html of destinations_gallery subpage
 
-__Not implemented and known bugs__ 
-- Few minor design differences regarding the provided screenshots were made, to increase UX.  
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel agency: Amalfi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    >
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script&family=Montserrat:400,700&&display=swap"
+      rel="stylesheet"
+    >
+    <link href="../css/header.css" rel="stylesheet" type="text/css">
+    <link href="../css/destinations.css" rel="stylesheet" type="text/css">
+    <link href="../css/footer.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="header-amalfi">
+        <nav class="navbar">
+            <div class="navbar-left" style="position:relative;z-index:1100;">
+                <img src="../css/icons/search-white.svg" alt="Search" class="search-icon">
+                <form class="search-box" autocomplete="off">
+                    <input type="text" id="search-input" placeholder="Search our destinations..." autocomplete="off" style="color:white;">
+                    <ul id="suggestions" class="suggestions-list"></ul>
+                </form>
+            </div>
+            <div class="navbar-center">
+                <img src="../css/icons/globe-white.svg" alt="Logo" class="globe-icon">
+            </div>
+            <div class="navbar-right">
+                <a href="contact_us.html" class="btn btn-light text-nowrap">Contact Us</a>
+                <img src="../css/icons/three-bars-white.svg" alt="Menu" class="menu-icon">
+            </div>
+        </nav>
+        <div class="header-bottom">
+            <div class="header_text">
+                <div>Perfect mix of culture and nature</div>
+                <h1>
+                    Amalfi coast
+                </h1>
+                <div class="amalfi-text">
+                    Book you holiday here:
+                </div>
+      <div class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="destination">Destination</label>
+              <select name="Destination" id="destination">
+                 <option value="" disabled selected>Select a destination</option>
+                 <option value="paris">Paris</option>
+                 <option value="berlin">Berlin</option>
+                 <option value="rome">Rome</option>
+              </select>
+                </div>
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <label for="fromdate">From</label>
+                      <input type="date" name="fromdate" id="fromdate">
+                    </div>
+                    <div class="form-group">
+                      <label for="todate">To</label>
+                      <input type="date" name="todate" id="todate">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="guests">Guests</label>
+                    <input type="number" name="guests" id="guests" min="1" max="10" placeholder="2">
+                  </div>
+                  <div class="form-group">
+                    <label style="opacity:0;">Submit</label>
+                    <button type="submit" class="submit-btn">
+                      <img src="./css/icons/arrow-right.svg" alt="Logo" class="arrow-icon">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </header>
