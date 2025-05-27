@@ -63,3 +63,4 @@ __Structure__
 __Not implemented and known bugs__ 
 - Few minor design differences regarding the provided screenshots were made, to increase UX.
 - Minor linkink bug, coused by different location of html files (path differences).
+- Minor formating bug if not popular screen resolution is selected
